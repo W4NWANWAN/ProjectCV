@@ -1,84 +1,84 @@
-# Sistem Deteksi Objek Real-time
+# Real-time Object Detection System
 
-Sebuah aplikasi web Flask yang menggunakan model YOLOv8 untuk mendeteksi objek dari feed webcam secara real-time.
+A Flask web application that uses the YOLOv8 model to detect objects from a webcam feed in real-time.
 
-## Deskripsi
+## Description
 
-Proyek ini adalah aplikasi web yang dibangun menggunakan Flask (framework Python) yang mampu melakukan deteksi objek secara real-time melalui feed webcam pengguna. Aplikasi ini memanfaatkan kekuatan model YOLOv8 dari Ultralytics untuk mengidentifikasi dan melokalisasi berbagai objek dalam frame video. Hasil deteksi ditampilkan langsung di antarmuka web, memberikan pengalaman interaktif kepada pengguna.
+This project is a web application built using Flask (a Python framework) capable of performing real-time object detection through the user's webcam feed. The application leverages the power of the YOLOv8 model from Ultralytics to identify and localize various objects within the video frames. The detection results are displayed directly in the web interface, providing an interactive experience for the user.
 
-## Fitur Utama
+## Key Features
 
-*   **Deteksi Objek Real-time:** Mampu mendeteksi objek dari feed webcam secara langsung.
-*   **Model YOLOv8:** Menggunakan model deteksi objek state-of-the-art YOLOv8 untuk akurasi dan kecepatan tinggi.
-*   **Antarmuka Web Interaktif:** Dibangun dengan Flask dan HTML/CSS sederhana untuk menampilkan feed video dan hasil deteksi.
-*   **Mudah Digunakan:** Proses instalasi dan penggunaan yang relatif sederhana.
+*   **Real-time Object Detection:** Capable of detecting objects from a live webcam feed.
+*   **YOLOv8 Model:** Utilizes the state-of-the-art YOLOv8 object detection model for high accuracy and speed.
+*   **Interactive Web Interface:** Built with Flask and simple HTML/CSS to display the video feed and detection results.
+*   **Easy to Use:** Relatively straightforward installation and usage process.
 
-## Teknologi yang Digunakan
+## Technologies Used
 
-*   **Python:** Bahasa pemrograman utama yang digunakan.
-*   **Flask:** Framework web micro untuk membangun aplikasi.
-*   **OpenCV (cv2):** Library untuk pemrosesan gambar dan video, termasuk pengambilan feed webcam.
-*   **Ultralytics YOLOv8:** Library untuk implementasi model YOLOv8.
-*   **HTML/CSS:** Untuk membangun antarmuka pengguna di sisi klien.
+*   **Python:** The primary programming language used.
+*   **Flask:** A micro web framework for building the application.
+*   **OpenCV (cv2):** Library for image and video processing, including webcam feed capture.
+*   **Ultralytics YOLOv8:** Library for implementing the YOLOv8 model.
+*   **HTML/CSS:** For building the client-side user interface.
 
-## Instalasi
+## Installation
 
-1.  **Clone Repositori:**
+1.  **Clone the Repository:**
     ```bash
-    git clone https://github.com/USERNAME/NAMA-REPOSITORI.git
-    cd NAMA-REPOSITORI
+    git clone https://github.com/USERNAME/REPOSITORY-NAME.git
+    cd REPOSITORY-NAME
     ```
 
-2.  **Buat dan Aktifkan Virtual Environment (Direkomendasikan):**
+2.  **Create and Activate a Virtual Environment (Recommended):**
     ```bash
     python -m venv venv
-    # Untuk Windows
+    # For Windows
     venv\Scripts\activate
-    # Untuk macOS/Linux
+    # For macOS/Linux
     source venv/bin/activate
     ```
 
-3.  **Install Dependensi:**
+3.  **Install Dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
-    *(Catatan: Pastikan file `requirements.txt` berisi semua paket yang dibutuhkan seperti `flask`, `opencv-python`, `ultralytics`)*
+    *(Note: Ensure the `requirements.txt` file contains all necessary packages like `flask`, `opencv-python`, `ultralytics`)*
 
-## Cara Penggunaan
+## Usage
 
-1.  **Jalankan Aplikasi Flask:**
+1.  **Run the Flask Application:**
     ```bash
     python app.py
     ```
-    *(Catatan: Nama file utama mungkin berbeda, sesuaikan jika perlu)*
+    *(Note: The main file name might differ, adjust if necessary)*
 
-2.  **Buka Browser:**
-    Buka browser web Anda dan akses alamat `http://127.0.0.1:5000/` (atau alamat lain yang ditampilkan di terminal).
+2.  **Open Your Browser:**
+    Open your web browser and go to `http://127.0.0.1:5000/` (or the address displayed in your terminal).
 
-3.  **Izinkan Akses Webcam:**
-    Browser akan meminta izin untuk mengakses webcam Anda. Izinkan akses tersebut.
+3.  **Allow Webcam Access:**
+    Your browser will ask for permission to access your webcam. Allow it.
 
-4.  **Lihat Deteksi:**
-    Feed webcam Anda akan ditampilkan di halaman web, dan objek yang terdeteksi akan ditandai dengan bounding box beserta label kelasnya.
+4.  **View Detection:**
+    Your webcam feed will be displayed on the web page, and detected objects will be marked with bounding boxes and class labels.
 
-## Kontribusi
+## Contributing
 
-Kontribusi sangat diterima! Jika Anda ingin berkontribusi, silakan fork repositori ini dan buat pull request. Anda juga dapat membuka issue jika menemukan bug atau memiliki saran fitur.
+Contributions are welcome! If you'd like to contribute, please fork this repository and create a pull request. You can also open an issue if you find a bug or have a feature suggestion.
 
-## Lisensi
+## License
 
-Proyek ini dilisensikan di bawah [NAMA LISENSI, cth: MIT License]. Lihat file `LICENSE` untuk detail lebih lanjut.
+This project is licensed under the [LICENSE NAME, e.g., MIT License]. See the `LICENSE` file for more details.
 ---
 
-**Catatan Tambahan:**
+**Additional Notes:**
 
-*   Pastikan Anda memiliki webcam yang terhubung dan berfungsi dengan baik.
-*   Kinerja deteksi dapat bervariasi tergantung pada spesifikasi perangkat keras komputer Anda.
-*   Anda mungkin perlu menginstal driver tambahan untuk webcam Anda tergantung pada sistem operasi yang digunakan.
-*   File `requirements.txt` harus dibuat dan berisi daftar semua dependensi Python yang diperlukan. Contoh isi `requirements.txt`:
+*   Ensure you have a webcam connected and functioning correctly.
+*   Detection performance may vary depending on your computer's hardware specifications.
+*   You might need to install additional drivers for your webcam depending on your operating system.
+*   The `requirements.txt` file must be created and should list all required Python dependencies. Example content for `requirements.txt`:
     ```
     Flask
     opencv-python
     ultralytics
-    # Tambahkan library lain jika ada
+    # Add other libraries if any
     ```
